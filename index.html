@@ -8,56 +8,63 @@
   <link rel="shortcut icon" href="/img/icon.png" type="image/x-icon">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="/css/style.css">
-<script src="script.js"></script>
+
 </head>
 <body>
+  <!--Start container-->
   <div class="container" >
+     <!--Start Categories Buttons-->
+    <div class="row p-2">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('Technology')"> Technology</button>
+        <button class="btn" onclick="filterSelection('Health')"> Health</button>
+        <button class="btn" onclick="filterSelection('Business')">Business</button>
+        <button class="btn" onclick="filterSelection('colors')"> </button>
+
+    </div>
+    <!--End Categories Buttons-->
+      <!--Start News section-->
       <div class="row"id="app">
         </div>
+   <!--End News section-->
+      <!--Start weather section-->
+        <div id="weather">
+            <section class="row">
+                <div class="container py-5 h-100">
+              
+                  <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-md-8 col-lg-6 col-xl-4">
+              
+                      <h3 class="mb-4 pb-2 fw-normal">Check the weather forecast</h3>
+              
+                  <div class="input-group rounded mb-3">
+                        <input  class="form-control rounded" placeholder="City" id="searchCityInput">
+                        <button class="btn outline btn-primary" id="searchCity">Check</button>
+                      </div>
+
+                      <div class="card shadow-0 border">
+                        <div class="card-body p-4">
+              
+                          <h4 class="mb-1 sfw-normal" id="city_name"></h4>
+                          <p class="mb-2">Current temperature: <strong id="temp"></strong></p>
+                          <div class="d-flex flex-row align-items-center">
+                            <p class="mb-0 me-4" id="ob_time"></p>
+                            <i class="fas fa-cloud fa-3x" style="color: #eee;"></i>
+                          </div>
+              
+                        </div>
+                      </div>
+              
+                    </div>
+                  </div>
+              
+                </div>
+              </section>
+          </div>
+           <!--End weather section-->
 </div>
+<!--End container-->
+<!--script files-->
+<script src="script.js"></script>
 </body>
 </html>
-<!--
-      <div class="row">
-
-      </div>
-    <div class="row">
-  <div class="card col-3" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-    
-  </div>
-  <div class="card col-3" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-      
-    </div>
-    <div class="card col-3" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-        
-      </div>
-      <div class="card col-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-          
-        </div>
-</div>
-
--->
