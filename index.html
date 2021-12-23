@@ -7,7 +7,9 @@
   <title>Today News</title>
   <link rel="shortcut icon" href="/img/icon.png" type="image/x-icon">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/css/style.css">
 
 </head>
 <body>
@@ -15,16 +17,36 @@
   <div class="container" >
      <!--Start Categories Buttons-->
     <div class="row p-2">
+      <div class="col-6">
         <button id="all" class="btn active"> Show all</button>
         <button id="Technology" class="btn"> Technology</button>
         <button id="Health" class="btn"> Health</button>
         <button id="Business" class="btn">Business</button>
+      </div>
+      <div class="col-6">
+        <form class="form-inline md-form mr-auto mb-4">
+            <input id="wordSearch" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button id="searchButton"class="btn outline btn-primary" type="submit">Search</button>
+          </form>
+          </div>
 
     </div>
     <!--End Categories Buttons-->
       <!--Start News section-->
-      <div class="row"id="app">
+  
+      <div class="row" id="app">
+
+          
         </div>
+        <nav class="row m-2" aria-label="...">
+            <ul class="pagination pagination-lg">
+              <li class="page-item disabled">
+                  <button id="one" class="page-link" >1</button>              </li>
+              <li class="page-item"><button id="tow" class="page-link" >2</button></li>
+              <li class="page-item"><button id="three" class="page-link" >3</button></li>
+            </ul>
+          </nav>
+ 
    <!--End News section-->
       <!--Start weather section-->
         <div id="weather">

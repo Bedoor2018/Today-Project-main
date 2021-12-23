@@ -1,6 +1,6 @@
 //var
 url1 =
-  "https://newsapi.org/v2/everything?q=all&from=2021-12-19&sortBy=popularity&apiKey=22258211780d49d4ba1b1b80c8eda67e";
+  "https://newsapi.org/v2/everything?q=all&from=2021-12-19&sortBy=popularity&page=1&apiKey=22258211780d49d4ba1b1b80c8eda67e";
 url2 =
   "https://api.weatherbit.io/v2.0/current?city=Riyadh&key=23613dd34b1f4334a0280e3d2831a380";
 //selector
@@ -9,6 +9,10 @@ const TechnologyCat = document.querySelector("#Technology");
 const HealthCat = document.querySelector("#Health");
 const AllCat = document.querySelector("#all");
 const BusinessCat = document.querySelector("#Business");
+const searchButton = document.querySelector("#searchButton");
+const one=document.querySelector('#one');
+const tow=document.querySelector('#tow');
+const three=document.querySelector('#three');
 //call functions
 getNews(url1);
 getWeather(url2);
@@ -57,6 +61,13 @@ function getWeather(link) {
     })
     .catch(error => console.log("error"));
 }
+
+//3-function
+
+  function search(context) {
+
+    
+};
 
 //event listener
 searchbut.addEventListener("click", function() {
@@ -108,5 +119,42 @@ BusinessCat.addEventListener("click", function() {
     BusinessCat.classList.add('active');
     url3 =
       "https://newsapi.org/v2/everything?q=Business&from=2021-12-19&sortBy=popularity&apiKey=22258211780d49d4ba1b1b80c8eda67e";
+    getNews(url3);
+  });
+  searchButton.addEventListener("click", function() {
+    const wordSearch = document.querySelector("#wordSearch");
+    search(wordSearch.value)
+  });
+
+  one.addEventListener("click", function() {
+    const disabledButtons=document.querySelectorAll('.disabled');
+    disabledButtons.forEach(element => {
+        element.classList.remove('disabled')
+    });
+    one.classList.add('disabled');
+    url3 =
+      "https://newsapi.org/v2/everything?q=Business&from=2021-12-19&sortBy=popularity&page=1&apiKey=22258211780d49d4ba1b1b80c8eda67e";
+    getNews(url3);
+  });
+
+  tow.addEventListener("click", function() {
+    const disabledButtons=document.querySelectorAll('.disabled');
+    disabledButtons.forEach(element => {
+        element.classList.remove('disabled')
+    });
+    tow.classList.add('disabled');
+    url3 =
+      "https://newsapi.org/v2/everything?q=Business&from=2021-12-19&sortBy=popularity&page=2&apiKey=22258211780d49d4ba1b1b80c8eda67e";
+    getNews(url3);
+  });
+
+  three.addEventListener("click", function() {
+    const disabledButtons=document.querySelectorAll('.disabled');
+    disabledButtons.forEach(element => {
+        element.classList.remove('disabled')
+    });
+    three.classList.add('disabled');
+    url3 =
+      "https://newsapi.org/v2/everything?q=Business&from=2021-12-19&sortBy=popularity&page=3&apiKey=22258211780d49d4ba1b1b80c8eda67e";
     getNews(url3);
   });
