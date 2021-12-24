@@ -1,10 +1,10 @@
 //var
 url1 =
-  "https://newsapi.org/v2/everything?q=all&from=2021-12-15&to=2021-12-19&sortBy=popularity&page=1&apiKey=22258211780d49d4ba1b1b80c8eda67e";
+  "https://newsapi.org/v2/everything?q=all&from=2021-12-15&to=2021-12-19&sortBy=popularity&page=1&apiKey=2d850823b2fb4e028fb093a6502cec85";
 url2 =
   "https://api.weatherbit.io/v2.0/current?city=Riyadh&key=23613dd34b1f4334a0280e3d2831a380";
 url4 =
-  "https://newsapi.org/v2/everything?q=all&from=2021-12-23&to=2021-12-25&sortBy=popularity&page=1&apiKey=22258211780d49d4ba1b1b80c8eda67e";
+  "https://newsapi.org/v2/everything?q=all&from=2021-12-23&to=2021-12-25&sortBy=popularity&page=1&apiKey=2d850823b2fb4e028fb093a6502cec85";
 
   url5="https://www.googleapis.com/youtube/v3/videos?id=7lCDEYXw3mM&key=AIzaSyDCU6nXexQfVW0SoeXdz1URYFX6qadubWQ";//youtube api
 
@@ -116,7 +116,7 @@ TechnologyCat.addEventListener("click", function() {
     });
     TechnologyCat.classList.add('active');
   url3 =
-    "https://newsapi.org/v2/everything?q=Technology&from=2021-12-15&to=2021-12-19&sortBy=popularity&page="+ disabledButtons.value+"&apiKey=22258211780d49d4ba1b1b80c8eda67e";
+    "https://newsapi.org/v2/everything?q=Technology&from=2021-12-15&to=2021-12-19&sortBy=popularity&page="+ disabledButtons.value+"&apiKey=2d850823b2fb4e028fb093a6502cec85";
   getNews(url3);
 });
 
@@ -128,7 +128,7 @@ HealthCat.addEventListener("click", function() {
     });
     HealthCat.classList.add('active');
   url3 =
-    "https://newsapi.org/v2/everything?q=Health&from=2021-12-15&to=2021-12-19&sortBy=popularity&page="+ disabledButtons.value+"&apiKey=22258211780d49d4ba1b1b80c8eda67e";
+    "https://newsapi.org/v2/everything?q=Health&from=2021-12-15&to=2021-12-19&sortBy=popularity&page="+ disabledButtons.value+"&apiKey=2d850823b2fb4e028fb093a6502cec85";
   getNews(url3);
 });
 
@@ -140,7 +140,7 @@ AllCat.addEventListener("click", function() {
     });
     AllCat.classList.add('active');
   url3 =
-    "https://newsapi.org/v2/everything?q=all&from=2021-12-15&to=2021-12-19&sortBy=popularity&page="+ disabledButtons.value+"&apiKey=22258211780d49d4ba1b1b80c8eda67e";
+    "https://newsapi.org/v2/everything?q=all&from=2021-12-15&to=2021-12-19&sortBy=popularity&page="+ disabledButtons.value+"&apiKey=2d850823b2fb4e028fb093a6502cec85";
   getNews(url3);
 });
 BusinessCat.addEventListener("click", function() {
@@ -151,7 +151,7 @@ BusinessCat.addEventListener("click", function() {
     });
     BusinessCat.classList.add('active');
     url3 =
-      "https://newsapi.org/v2/everything?q=Business&from=2021-12-15&to=2021-12-19&sortBy=popularity&page="+ disabledButtons.value+"&apiKey=22258211780d49d4ba1b1b80c8eda67e";
+      "https://newsapi.org/v2/everything?q=Business&from=2021-12-15&to=2021-12-19&sortBy=popularity&page="+ disabledButtons.value+"&apiKey=2d850823b2fb4e028fb093a6502cec85";
     getNews(url3);
   });
 
@@ -164,7 +164,7 @@ BusinessCat.addEventListener("click", function() {
     });
     SportCat.classList.add('active');
     url3 =
-      "https://newsapi.org/v2/everything?q=Sport&from=2021-12-15&to=2021-12-19&sortBy=popularity&page="+ disabledButtons.value+"&apiKey=22258211780d49d4ba1b1b80c8eda67e";
+      "https://newsapi.org/v2/everything?q=Sport&from=2021-12-15&to=2021-12-19&sortBy=popularity&page="+ disabledButtons.value+"&apiKey=2d850823b2fb4e028fb093a6502cec85";
     getNews(url3);
   });
   /*searchButton.addEventListener("click", function() {
@@ -179,7 +179,7 @@ BusinessCat.addEventListener("click", function() {
     });
     one.classList.add('disabled');
     url3 =
-      "https://newsapi.org/v2/everything?q=all&from=2021-12-15&to=2021-12-19&sortBy=popularity&page=1&apiKey=22258211780d49d4ba1b1b80c8eda67e";
+      "https://newsapi.org/v2/everything?q=all&from=2021-12-15&to=2021-12-19&sortBy=popularity&page=1&apiKey=2d850823b2fb4e028fb093a6502cec85";
     getNews(url3);
   });
 
@@ -191,7 +191,7 @@ BusinessCat.addEventListener("click", function() {
     });
     tow.classList.add('disabled');
     url3 =
-      "https://newsapi.org/v2/everything?q=all&from=2021-12-15&to=2021-12-19&sortBy=popularity&page=2&apiKey=22258211780d49d4ba1b1b80c8eda67e";
+      "https://newsapi.org/v2/everything?q=all&from=2021-12-15&to=2021-12-19&sortBy=popularity&page=2&apiKey=2d850823b2fb4e028fb093a6502cec85";
     getNews(url3);
   });
 
@@ -202,39 +202,6 @@ BusinessCat.addEventListener("click", function() {
     });
     three.classList.add('disabled');
     url3 =
-      "https://newsapi.org/v2/everything?q=all&from=2021-12-15&to=2021-12-19&sortBy=popularity&page=3&apiKey=22258211780d49d4ba1b1b80c8eda67e";
+      "https://newsapi.org/v2/everything?q=all&from=2021-12-15&to=2021-12-19&sortBy=popularity&page=3&apiKey=2d850823b2fb4e028fb093a6502cec85";
     getNews(url3);
   });
-
-
- /* <div class="row">
-  <div class="col-sm-4 grid-margin">
-    <div class="position-relative">
-      <div class="rotate-img">
-        <img
-          src="assets/images/dashboard/home_4.jpg"
-          alt="thumb"
-          class="img-fluid"
-        />
-      </div>
-      <div class="badge-positioned">
-        <span class="badge badge-danger font-weight-bold"
-          >Flash news</span
-        >
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-8  grid-margin">
-    <h2 class="mb-2 font-weight-600">
-      South Korea’s Moon Jae-in sworn in vowing to address
-      North
-    </h2>
-    <div class="fs-13 mb-2">
-      <span class="mr-2">Photo </span>10 Minutes ago
-    </div>
-    <p class="mb-0">
-      Lorem Ipsum has been the industry's standard dummy
-      text ever since the 1500s, when an
-    </p>
-  </div>
-</div>*/
