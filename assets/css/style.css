@@ -30,8 +30,9 @@
 }
 
 .disabled{
-  color: #032a63;
+  color: #f5a623;
 }
+
 :root {
   --blue: #5e50f9;
   --indigo: #6610f2;
