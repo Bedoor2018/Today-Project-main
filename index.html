@@ -1,91 +1,217 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Today News</title>
+    <link rel="shortcut icon" href="/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
+  />
 
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Today News</title>
-  <link rel="shortcut icon" href="/img/icon.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="assets/css/materialdesignicons.min.css"
+    />
+    <link rel="stylesheet" href="assets/vendors/aos/dist/aos.css/aos.css" />
 
-  <link rel="stylesheet" href="/css/style.css">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
 
-</head>
-<body>
-  <!--Start container-->
-  <div class="container" >
-     <!--Start Categories Buttons-->
-    <div class="row p-2">
-      <div class="col-6">
-        <button id="all" class="btn active"> Show all</button>
-        <button id="Technology" class="btn"> Technology</button>
-        <button id="Health" class="btn"> Health</button>
-        <button id="Business" class="btn">Business</button>
-      </div>
-      <div class="col-6">
-        <form class="form-inline md-form mr-auto mb-4">
-            <input id="wordSearch" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button id="searchButton"class="btn outline btn-primary" type="submit">Search</button>
-          </form>
-          </div>
-
-    </div>
-    <!--End Categories Buttons-->
-      <!--Start News section-->
-  
-      <div class="row" id="app">
-
-          
-        </div>
-        <nav class="row m-2" aria-label="...">
-            <ul class="pagination pagination-lg">
-              <li class="page-item disabled">
-                  <button id="one" class="page-link" >1</button>              </li>
-              <li class="page-item"><button id="tow" class="page-link" >2</button></li>
-              <li class="page-item"><button id="three" class="page-link" >3</button></li>
-            </ul>
-          </nav>
- 
-   <!--End News section-->
-      <!--Start weather section-->
-        <div id="weather">
-            <section class="row">
-                <div class="container py-5 h-100">
-              
-                  <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div class="col-md-8 col-lg-6 col-xl-4">
-              
-                      <h3 class="mb-4 pb-2 fw-normal">Check the weather forecast</h3>
-              
-                  <div class="input-group rounded mb-3">
-                        <input  class="form-control rounded" placeholder="City" id="searchCityInput">
-                        <button class="btn outline btn-primary" id="searchCity">Check</button>
-                      </div>
-
-                      <div class="card shadow-0 border">
-                        <div class="card-body p-4">
-              
-                          <h4 class="mb-1 sfw-normal" id="city_name"></h4>
-                          <p class="mb-2">Current temperature: <strong id="temp"></strong></p>
-                          <div class="d-flex flex-row align-items-center">
-                            <p class="mb-0 me-4" id="ob_time"></p>
-                            <i class="fas fa-cloud fa-3x" style="color: #eee;"></i>
-                          </div>
-              
-                        </div>
-                      </div>
-              
+  <body>
+    <div class="container-scroller">
+      <div class="main-panel">
+        <!-- partial:partials/_navbar.html -->
+        <header id="header">
+          <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <div class="navbar-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <a class="navbar-brand" href="#"
+                      ><span><h1 class="text-white">Today News</h1></span></a>
+                  </div>
+                  <div>
+                    <button
+                      class="navbar-toggler"
+                      type="button"
+                      data-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                      class="navbar-collapse justify-content-center collapse"
+                      id="navbarSupportedContent"
+                    >
+                      <ul
+                        class="navbar-nav d-lg-flex justify-content-between align-items-center "
+                      >
+                        <li>
+                          <button class="navbar-close">
+                              <i class="fas fa-window-close"></i>
+                          </button>
+                        </li>
+                       
+                        <li class="nav-item">
+                          <a class="nav-link" href="contactus.html">Contact</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#app">Article</a>
+                          </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                          </li>
+                      </ul>
                     </div>
                   </div>
-              
+                  
                 </div>
-              </section>
+              </div>
+            </nav>
           </div>
-           <!--End weather section-->
-</div>
-<!--End container-->
-<!--script files-->
-<script src="script.js"></script>
-</body>
+        </header>
+
+        <!-- partial -->
+        <div class="content-wrapper">
+          <div class="container">
+            <div class="row" data-aos="fade-up">
+              <div class="col-xl-8 stretch-card grid-margin">
+                <div class="position-relative">
+                    <div class="input-group rounded mb-3">
+                        <input  class="form-control rounded" placeholder="Enter Your City Name To Check Weather" id="searchCityInput">
+                        <button class="btn outline btn-primary" id="searchCity">Check</button>
+                      </div>
+                      <div class="banner-content">
+                      
+                          <div class="badge badge-danger fs-12 font-weight-bold mb-3">
+                            Weather now
+                          </div>
+                          <h1 class="mb-0" id="city_name"></h1>
+                          <h1 id="temp"></h1>
+                          <h1 class="mb-2" id="ob_time">
+                          </h1>
+                        
+                        </div>
+                  <img
+                    src="assets/images/ASpot_Weather.jpeg"
+                    alt="banner"
+                    class="img-fluid"
+                  />
+                  
+                 
+                </div>
+              </div>
+              <!--last news-->
+              <div class="col-xl-4 stretch-card grid-margin">
+                <div class="card bg-dark text-white">
+                  <div class="card-body" id="lastNews">
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" data-aos="fade-up">
+              <div class="col-lg-3 stretch-card grid-margin">
+                <div class="card">
+                  <div class="card-body">
+                    <h2>Category</h2>
+                    <ul class="vertical-menu">
+                      <li><button id="Technology" style="font-size:20px;" class="btn">Technology</button></li>
+                      <li><button id="Health" style="font-size:20px;" class="btn">Health</button></li>
+                      <li><button id="Business" style="font-size:20px;" class="btn">Business</button></li>
+                      <li><button id="Sport" style="font-size:20px;" class="btn">Sport</button></li>
+                      <li><button id="all" style="font-size:20px;" class="btn">All</button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!--articles-->
+              <div class="col-lg-9 stretch-card grid-margin">
+                <div class="card">
+                  <div class="card-body" id="app" >
+
+                  </div>
+                  <nav class="ml-auto mr-auto" aria-label="...">
+                      <ul class="pagination pagination-lg" style="padding:0">
+                        <li class="page-item  disabled" value="1">
+                            <button id="one" class=" rounded-circle" >1</button>              </li>
+                        <li class="page-item" value="2"><button id="tow" class="rounded-circle" >2</button></li>
+                        <li class="page-item" value="2"><button id="three" class="rounded-circle" >3</button></li>
+                      </ul>
+                    </nav>
+                </div>
+                
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+        <!-- main-panel ends -->
+        <!-- container-scroller ends -->
+
+        <!-- partial:partials/_footer.html -->
+        <footer>
+          <div class="footer-top">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-5">
+                    <a class="navbar-brand" href="#"
+                    ><span><h1 class="text-white">Today News</h1></span></a>
+                  <h5 class="font-weight-normal mt-4 mb-5">
+                    Newspaper is your news, entertainment, music fashion website. We
+                    provide you with the latest breaking news and videos straight from
+                    the entertainment industry.
+                  </h5>
+                  <ul class="social-media mb-3">
+                      <li>
+                          <a href="https://twitter.com/bex_2030">
+                            <i class="fab fa-twitter-square"></i>
+                          </a>
+                        </li>
+                    <li>
+                      <a href="#">
+                          <i class="fab fa-facebook-square"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                          <i class="fab fa-youtube-square"></i>
+                      </a>
+                    </li>
+                   
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+ 
+        </footer>
+
+        <!-- partial -->
+      </div>
+    </div>
+    <!-- inject:js -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- plugin js for this page -->
+    <script src="assets/vendors/aos/dist/aos.js/aos.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- Custom js for this page-->
+    <script src="assets/js/demo.js"></script>
+    <script src="assets/js/jquery.easeScroll.js"></script>
+    <!-- End custom js for this page-->
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
