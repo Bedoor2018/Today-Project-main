@@ -80,79 +80,27 @@
           </div>
         </header>
 
-        <!-- partial -->
+ 
         <div class="content-wrapper">
-          <div class="container">
-            <div class="row" data-aos="fade-up">
-              <div class="col-xl-8 stretch-card grid-margin">
-                <div class="position-relative">
-                    <div class="input-group rounded mb-3">
-                        <input  class="form-control rounded" placeholder="Enter Your City Name To Check Weather" id="searchCityInput">
-                        <button class="btn outline btn-primary " id="searchCity">Check</button>
-                      </div>
-                      <div class="banner-content">
-                      
-                          <div class="badge badge-danger fs-12 font-weight-bold mb-3">
-                            Weather now
-                          </div>
-                          <h1 class="mb-0" id="city_name"></h1>
-                          <h1 id="temp"></h1>
-                          <h1 class="mb-2" id="ob_time">
-                          </h1>
-                        
-                        </div>
-                  <img
-                    src="assets/images/ASpot_Weather.jpeg"
-                    alt="banner"
-                    class="img-fluid"
-                  />
-                  
+            
+          <div class="container ">
+              <!-- search-->
+            <div class="row " data-aos="fade-up">
+                    <div class="col-xl-12">
+                            <div class="input-group rounded mb-3">
+                                    <input  class="form-control rounded" placeholder="Search" id="searchInput">
+                                    <button class="btn outline btn-primary " id="searchButton">Search</button>
+                                  </div>
+                        </div></div>
+                               <!-- article -->
+            <div class="row " data-aos="fade-up">
+              <div class="col-xl-12">
+                <div class="position-relative justify-content-center" id="Allart">
+
                  
                 </div>
               </div>
-              <!--last news-->
-              <div class="col-xl-4 stretch-card grid-margin">
-                <div class="card bg-dark text-white">
-                  <div class="card-body" id="lastNews">
-                  
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row" data-aos="fade-up">
-              <div class="col-lg-3 stretch-card grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h2>Category</h2>
-                    <ul class="vertical-menu">
-                      <li><button id="Technology" style="font-size:20px;" class="btn">Technology</button></li>
-                      <li><button id="Health" style="font-size:20px;" class="btn">Health</button></li>
-                      <li><button id="Business" style="font-size:20px;" class="btn">Business</button></li>
-                      <li><button id="Sport" style="font-size:20px;" class="btn">Sport</button></li>
-                      <li><button id="all" style="font-size:20px;" class="btn active">All</button></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
 
-              <!--articles-->
-              <div class="col-lg-9 stretch-card grid-margin">
-                <div class="card">
-                  <div class="card-body" id="app" >
-
-                  </div>
-                  <nav class="ml-auto mr-auto" aria-label="...">
-                      <ul class="pagination pagination-lg" style="padding:0">
-                        <li class="page-item  disabled" value="1">
-                            <button id="one" class="rounded-circle border " >1</button>              </li>
-                        <li class="page-item ml-1" value="2"><button id="tow" class="rounded-circle border " >2</button></li>
-                        <li class="page-item ml-1" value="2"><button id="three" class="rounded-circle border " >3</button></li>
-                      </ul>
-                    </nav>
-                </div>
-                
-              </div>
-              
             </div>
 
           </div>
@@ -202,6 +150,42 @@
         <!-- partial -->
       </div>
     </div>
+    <script>
+        
+url5=
+"https://newsapi.org/v2/everything?q=all&from=2021-12-15&to=2021-12-24&sortBy=popularity&page=1&apiKey=2d850823b2fb4e028fb093a6502cec85";
+        const searchButton = document.querySelector("#searchButton");
+const searchInput = document.getElementById("searchCityInput");
+geAllNews(url5);
+    function geAllNews(link) {
+  var z="";
+  var x=0;
+  fetch(link)
+    .then(res => res.json())
+    .then(data => {
+data.articles.map(article => {
+
+z += ' <div class="card-group" >  <div class="card m-1"><img src="'+article.urlToImage+'" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">'+article.title+'</h5><p class="card-text">'+article.content+'</p><p class="card-text"><a href="'+article.url+'" class="text-muted">Read more..</a></p></div></div></div>';       
+        })
+        .join("");
+     document.querySelector("#Allart").innerHTML = z;
+    })
+    .catch(error => console.log("error"));
+};
+
+function search(context) {
+  url =
+  "https://newsapi.org/v2/everything?q="+context+"&from=2021-12-15&to=2021-12-19&sortBy=popularity&page=1&pageSize=5&apiKey=2d850823b2fb4e028fb093a6502cec85";
+  geAllNews(url);
+
+  console.log("hi from search");
+};
+searchButton.addEventListener("click", function() {
+    const wordSearch = document.querySelector("#searchInput");
+    search(wordSearch.value);
+  });
+
+    </script>
     <!-- inject:js -->
     <script src="assets/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
@@ -212,6 +196,6 @@
     <script src="assets/js/demo.js"></script>
     <script src="assets/js/jquery.easeScroll.js"></script>
     <!-- End custom js for this page-->
-    <script src="assets/js/script.js"></script>
+   
   </body>
 </html>
