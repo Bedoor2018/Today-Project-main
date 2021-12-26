@@ -79,6 +79,7 @@ data.articles.map(article => {
 
 //event listener
 searchbut.addEventListener("click", function() {
+  const searchInput=document.querySelector('#searchCityInput');
   url3 =
     "https://api.weatherbit.io/v2.0/current?city=" +
     searchInput.value +
